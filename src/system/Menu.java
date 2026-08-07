@@ -6,7 +6,6 @@ import models.Customer;
 import models.Electronics;
 import models.Food;
 import models.Product;
-// Ahmad Almori
 /**
  *
  * @author KMNS Ahmad Almori

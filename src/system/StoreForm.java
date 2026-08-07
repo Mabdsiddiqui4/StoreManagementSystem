@@ -165,7 +165,6 @@ public class StoreForm extends javax.swing.JFrame {
         // هنا فكرت اضيف  Electronics أو Food.  بس ما ضفت
         if (name.equals("") || idt.equals("") || prt.equals("")) {
             //   return; // 
-            // حاولت اجيب شيء هنا يخلي الكود ما يسوي مشكلة بس البرنامج يشتغل تمام فقك ممكن في ترمنل يجيب مشاكل
         } else {
             int id = Integer.parseInt(jTextField3.getText()); // ضفت عشان اسهل على نفسي
             double price = Double.parseDouble(jTextField2.getText());

@@ -1,6 +1,7 @@
 package system;
 // Ahmad Almori
 // Muhammad Abdur Rahman Siddiqui  157260
+
 import models.Product;
 import models.Customer;
 import java.util.ArrayList;
@@ -15,6 +16,10 @@ import java.util.HashMap;
      HashMap<Integer, Product>   */
 public class Store {
 
+    private ArrayList<Customer> customers;
+    private ArrayList<Product> productList;
+    private HashMap<Integer, Product> productMap;
+
     public Store(ArrayList<Customer> customers, ArrayList<Product> productList, HashMap<Integer, Product> productMap) {
         this.customers = customers;
         this.productList = productList;
@@ -25,10 +30,6 @@ public class Store {
         return productList;
     }
 
-    private ArrayList<Customer> customers;
-    private ArrayList<Product> productList;
-    private HashMap<Integer, Product> productMap;
-
     public Store() {
         this.customers = new ArrayList<>();
         this.productList = new ArrayList<>();
@@ -38,27 +39,27 @@ public class Store {
 
     public void addProduct(Product Product) {
         productList.add(Product);
-        
+
         productMap.put(Product.getId(), Product);
-        
-    }
-    public void addCustomer (Customer Customer){
-        customers.add(Customer);
-        
-        
+
     }
 
-    public void showProducts (){
+    public void addCustomer(Customer Customer) {
+        customers.add(Customer);
+
+    }
+
+    public void showProducts() {
         for (int i = 0; i < productList.size(); i++) {
-            Product currentProduct  = productList.get(i);
-            System.out.println((i+1) + " = " + currentProduct.allproduct() );
+            Product currentProduct = productList.get(i);
+            System.out.println((i + 1) + " = " + currentProduct.allproduct());
         }
     }
-    
+
     public Product findProduct(int id) {
-        return productMap.get(id); 
+        return productMap.get(id);
     }
-    
+
     @Override
     public String toString() {
         return "Store{" + "customers=" + customers + ", productList=" + productList + ", productMap=" + productMap + '}';

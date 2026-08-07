@@ -16,5 +16,5 @@ public class DataManager {
         System.out.println("    Welcome to " + STORE_NAME);
         System.out.println("***********************************");
     }
-    public static final String line = "--------------------------";
+    public static final String line = "---------------------------";
 }
